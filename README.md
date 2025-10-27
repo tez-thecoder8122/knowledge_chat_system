@@ -17,37 +17,40 @@ A full-stack backend application that allows users to register, upload documents
 
 ## 🗂️ Project Structure
 
-knowledge_chat_system/
-│
+knowledge-chat-system/
 ├── app/
-│ ├── db/ # DB session and ORM setup
-│ ├── models/ # Pydantic and SQLAlchemy models/schemas
-│ │ ├── database.py
-│ │ ├── schemas.py
-│ ├── routes/ # All API endpoint route definitions
-│ │ ├── auth.py
-│ │ ├── documents.py
-│ │ ├── query.py
-│ ├── services/ # Business logic and abstractions
-│ │ ├── auth_service.py
-│ │ ├── document_service.py
-│ │ ├── embedding_service.py
-│ │ ├── query_service.py
-│ ├── utils/ # Utility functions (e.g., logger, helpers)
-│ ├── config.py # App-wide config (from .env)
-│ ├── main.py # FastAPI app instance
-│
-├── uploads/ # Uploaded user docs (ignored by git)
-├── faiss_indexes/ # FAISS vector indexes (ignored by git)
-├── logs/ # Log output (ignored by git)
-├── env/ # Local venv (ignored by git)
-│
-├── requirements.txt # Python dependencies
-├── Dockerfile # For Docker builds
-├── docker-compose.yml # Multi-container orchestration
-├── .env.example # Template for env variables
+│   ├── __init__.py
+│   ├── main.py
+│   ├── config.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── database.py
+│   │   └── schemas.py
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   ├── auth.py
+│   │   ├── documents.py
+│   │   └── query.py
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── auth_service.py
+│   │   ├── document_service.py
+│   │   ├── embedding_service.py
+│   │   └── query_service.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── logger.py
+│   │   └── helpers.py
+│   └── db/
+│       ├── __init__.py
+│       └── session.py
+├── faiss_indexes/
+├── uploads/
+├── .env
 ├── .gitignore
-│
+├── requirements.txt
+├── Dockerfile
+├── docker-compose.yml
 └── README.md
 
 
